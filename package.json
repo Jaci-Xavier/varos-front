@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run build:css",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "build:css": "postcss src/index.css -o public/build/tailwind.css",
-    "build": "vite build && npm run build:css"
+    "build:css": "postcss src/index.css -o public/build/tailwind.css"
   },
   "dependencies": {
     "react": "^18.2.0",
