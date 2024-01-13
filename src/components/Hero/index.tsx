@@ -1,4 +1,7 @@
 import arrow from '../../assets/arrow.png';
+import CarouselComponent from '../Carousel';
+import { cards } from '../../constants/Constants';
+
 
 function Hero() {
   return (
@@ -6,10 +9,11 @@ function Hero() {
       <h1 className='text-6xl font-extrabold leading-[70px] tracking[0em] text-left w-[564px] h-[210px]'>Investir de forma mais inteligente passa por aqui.</h1>
       <h2 className='w-[469px] h-[44px] text-[18px] font-semibold leading-5 tracking-[0em] text-left'>Fazemos de tudo para que você possa conquistar seus sonhos da melhor forma possível.</h2>
       <button 
-        className='flex flex-row bg-[#19C819] rounded-[40px] text-[rgba(0, 247, 0, 1)] w-[11em] h-[3em] text-[1em] items-center justify-center'
+        className='w-[13em] h-[3.5em] flex flex-row bg-[#19C819] rounded-[40px] text-[#00F700)] text-[1em] items-center justify-center'
         type="button"
       >Comprar agora <img src={arrow}></img>
       </button>
+      <CarouselComponent cards={cards} />
     </div>
   )
 }
