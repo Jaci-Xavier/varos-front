@@ -1,10 +1,12 @@
-import { Cards, NavItem } from '../types';
+import { Cards, NavItem, Carteiras } from '../types';
 import g1 from '../assets/Group.png';
 import g2 from '../assets/Group2.png';
 import g3 from '../assets/Group3.png';
 import g4 from '../assets/Group4.png';
 import g5 from '../assets/Group5.png';
 import g6 from '../assets/Group6.png';
+import fator from '../assets/FATOR.png';
+import dividendo from '../assets/Dividendos.png';
 
 
 const nav: Array<NavItem> = [
@@ -23,5 +25,10 @@ const cards: Array<Cards> = [
   { path: g6, title: 'Image 6', width: '141px', height: '26px'},
 ];
 
+const carteiras: Array<Carteiras> = [
+  { title: 'Carteira FATOR', img: fator, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Carteira Dividendos', img: dividendo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+];
 
-export { nav, cards };
+
+export { nav, cards, carteiras };

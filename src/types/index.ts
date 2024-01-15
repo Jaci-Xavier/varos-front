@@ -9,3 +9,9 @@ export interface Cards {
   width?: string;
   height?: string;
 }
+
+export interface Carteiras {
+  title: string;
+  img: string;
+  description: string;
+}
