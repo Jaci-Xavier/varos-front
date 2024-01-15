@@ -7,6 +7,14 @@ import g5 from '../assets/Group5.png';
 import g6 from '../assets/Group6.png';
 import fator from '../assets/FATOR.png';
 import dividendo from '../assets/Dividendos.png';
+import essencial from '../assets/Essencial.png';
+import fils from '../assets/FII.png';
+import smal from '../assets/small caps.png';
+import vza from '../assets/VZA.png';
+import codigo from '../assets/CODIGO.png';
+import dash from '../assets/Dash.png';
+import curso from '../assets/Minicurso.png';
+import enciclopedia from '../assets/Enciclopedia.png';
 
 
 const nav: Array<NavItem> = [
@@ -28,7 +36,23 @@ const cards: Array<Cards> = [
 const carteiras: Array<Carteiras> = [
   { title: 'Carteira FATOR', img: fator, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
   { title: 'Carteira Dividendos', img: dividendo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Carteira Essencial', img: essencial, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Carteira FII', img: fils, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Carteira Small Caps', img: smal, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+];
+
+const cursos: Array<Carteiras> = [
+  { title: 'Valuation 2.0', img: vza, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Código.py', img: codigo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Dash.py', img: dash, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Carteira Essencial', img: essencial, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.'},
+  { title: 'Curso Reels', img: curso, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+  { title: 'Enciclopédia', img: enciclopedia, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+];
+
+const constultoria: Array<Carteiras> = [
+  { title: 'Consultoria VAROS', img: vza, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.'},
 ];
 
 
-export { nav, cards, carteiras };
+export { nav, cards, carteiras, cursos, constultoria };

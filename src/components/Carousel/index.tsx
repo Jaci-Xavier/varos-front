@@ -10,9 +10,8 @@ function CarouselComponent({ cards }: { cards: Cards[] }) {
       </div>
       <AntdCarousel autoplay dots={false} className='h-[79px] w-[502px]'>
         {cards.map((card) => (
-          <div className='flex items-center'>
+          <div className='flex items-center' key={card.title}>
               <img 
-                key={card.title}
                 src={card.path}
                 alt={card.title}
                 className={`w-[${card.width}] h-[${card.height}] left-10 items-center`} 
