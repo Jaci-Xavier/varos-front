@@ -5,7 +5,7 @@ import { Carousel as AntdCarousel } from 'antd';
 function Testimonial({ cards }: { cards: Cards[] }) {
 
   return (
-    <div className='flex flex-col bg-black'>
+    <div className='flex flex-col bg-black h-[553px]'>
       <div className='w-[420px] h-[112px] flex flex-col'>
         <h1 className='text-[38px] font-bold'>Didática de verdade</h1>
         <div className='w-[259px] h-[22px]'>
