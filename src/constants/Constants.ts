@@ -1,4 +1,4 @@
-import { Cards, NavItem, Carteiras } from '../types';
+import { Cards, NavItem, MenuItems } from '../types';
 import g1 from '../assets/Group.png';
 import g2 from '../assets/Group2.png';
 import g3 from '../assets/Group3.png';
@@ -15,6 +15,8 @@ import codigo from '../assets/CODIGO.png';
 import dash from '../assets/Dash.png';
 import curso from '../assets/Minicurso.png';
 import enciclopedia from '../assets/Enciclopedia.png';
+import selecao from '../assets/Selecão-icon.png';
+import rectangle from '../assets/Rectangle89.png';
 
 
 const nav: Array<NavItem> = [
@@ -33,25 +35,26 @@ const cards: Array<Cards> = [
   { path: g6, title: 'Image 6', width: '141px', height: '26px'},
 ];
 
-const carteiras: Array<Carteiras> = [
-  { title: 'Carteira FATOR', img: fator, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Carteira Dividendos', img: dividendo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Carteira Essencial', img: essencial, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Carteira FII', img: fils, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Carteira Small Caps', img: smal, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+const carteiras: Array<MenuItems> = [
+  { title: 'Carteira Seleção', img: selecao, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', key: 0, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 1},
+  { title: 'Carteira FATOR', img: fator, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 1, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 1},
+  { title: 'Carteira Dividendos', img: dividendo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 2, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 1},
+  { title: 'Carteira Essencial', img: essencial, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 1},
+  { title: 'Carteira de FIIs', img: fils, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 1},
+  { title: 'Carteira Small Caps', img: smal, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 1},
 ];
 
-const cursos: Array<Carteiras> = [
-  { title: 'Valuation 2.0', img: vza, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Código.py', img: codigo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Dash.py', img: dash, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Carteira Essencial', img: essencial, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.'},
-  { title: 'Curso Reels', img: curso, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
-  { title: 'Enciclopédia', img: enciclopedia, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. '},
+const cursos: Array<MenuItems> = [
+  { title: 'Valuation 2.0', img: vza, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 6, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 2},
+  { title: 'Código.py', img: codigo, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 7, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 2},
+  { title: 'Dash.py', img: dash, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 8, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 2},
+  { title: 'Carteira Essencial', img: essencial, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', key: 9, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 2},
+  { title: 'Curso Reels', img: curso, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 10, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 2},
+  { title: 'Enciclopédia', img: enciclopedia, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', key: 11, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 2},
 ];
 
-const constultoria: Array<Carteiras> = [
-  { title: 'Consultoria VAROS', img: vza, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.'},
+const constultoria: Array<MenuItems> = [
+  { title: 'Consultoria VAROS', img: vza, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', key: 12, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque', photo: rectangle, menu: 3},
 ];
 
 

@@ -17,3 +17,13 @@ export interface Carteiras {
 }
 
 
+export interface MenuItems {
+  title: string;
+  img: string;
+  description: string;
+  key: number;
+  content: string;
+  photo: string;
+  menu: number;
+}
+
