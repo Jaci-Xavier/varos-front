@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer/Index';
 import Header from './components/Header';
 import Home from './pages/Home';
 
@@ -8,7 +9,10 @@ function App() {
     <div >
       <Header />
       <div >
-      <Home />
+        <Home />
+      </div>
+      <div className='flex flex-row justify-center'>
+        <Footer />
       </div>
     </div>
   )

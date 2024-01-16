@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FormData } from '../../types';
-
-
+import fetchApi from '../../utils/fetchApi';
 
 function ASideCard() {
   return (
@@ -13,16 +12,17 @@ function ASideCard() {
         <h1 className='text-[18px] font-bold leading-6'>Fique ligado no que tem de melhor no Mercado Financeiro</h1>
       </div>
     </div>
-  )
+  );
 }
 
-
-const  InputForm: React.FC = () => {
+const InputForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
   });
+
+  const [isSubmitDisabled, setSubmitDisabled] = useState(true);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
@@ -30,11 +30,29 @@ const  InputForm: React.FC = () => {
       ...prevData,
       [name]: value,
     }));
+
+    validateFormData();
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  const validateFormData = (): void => {
+    const isValidName = formData.name.length > 4;
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+    const isValidPhone = formData.phone.length >= 9;
+  
+    setSubmitDisabled(!(isValidName && isValidEmail && isValidPhone));
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
+    const apiResponse = await fetchApi('https://jsonplaceholder.typicode.com/todos/1');
+    console.log(apiResponse);
     console.log(formData);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+    });
+    setSubmitDisabled(true);
   };
 
   return (
@@ -42,7 +60,7 @@ const  InputForm: React.FC = () => {
       <div className=''>
         <ASideCard />
       </div>
-      <div className=' w-[564px] h-[384px] rounded-[32px] border border-gray-600 flex flex-col items-center text-center justify-center'>
+      <div className='w-[564px] h-[384px] rounded-[32px] border border-gray-600 flex flex-col items-center text-center justify-center'>
         <form onSubmit={handleSubmit} className='bg-black flex flex-col items-center w-[452px] h-[264px] justify-evenly'>
           <input
             className='rounded-[4px] w-[452px] h-[48px] bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]'
@@ -62,7 +80,7 @@ const  InputForm: React.FC = () => {
           />
           <input
             className='rounded-[4px] w-[452px] h-[48px] bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]'
-            type='text'
+            type='tel'
             name='phone'
             placeholder='Celular'
             value={formData.phone}
@@ -70,8 +88,9 @@ const  InputForm: React.FC = () => {
           />
           <div className='flex flex-row justify-center'>
             <button
-              className='bg-[#19C819] rounded-[4px] w-[452px] h-[48px] text-black text-[18px] font-semibold leading-6'
+              className={`bg-[#19C819] rounded-[4px] w-[452px] h-[48px] text-black text-[18px] font-semibold leading-6 ${isSubmitDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
               type='submit'
+              disabled={isSubmitDisabled}
             >
               QUERO ME INSCREVER
             </button>
@@ -79,7 +98,7 @@ const  InputForm: React.FC = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default InputForm;
