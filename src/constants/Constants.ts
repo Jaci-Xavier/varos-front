@@ -17,6 +17,9 @@ import curso from '../assets/Minicurso.png';
 import enciclopedia from '../assets/Enciclopedia.png';
 import selecao from '../assets/Selecão-icon.png';
 import rectangle from '../assets/Rectangle89.png';
+import frame593 from '../assets/Frame 593.png';
+import frame594 from '../assets/Frame 594.png';
+import frame595 from '../assets/Frame 595.png';
 
 
 const nav: Array<NavItem> = [
@@ -33,6 +36,18 @@ const cards: Array<Cards> = [
   { path: g4, title: 'Image 4', width: '28px', height: '28px'},
   { path: g5, title: 'Image 5', width: '29px', height: '28px'},
   { path: g6, title: 'Image 6', width: '141px', height: '26px'},
+];
+
+const testimonials: Array<Cards> = [
+  { path: frame593, title: 'Image 1'},
+  { path: frame594, title: 'Image 2'},
+  { path: frame595, title: 'Image 3'},
+];
+
+const testimonialsBg: Array<Cards> = [
+  { path: frame594, title: 'Image 2'},
+  { path: frame595, title: 'Image 3'},
+  { path: frame593, title: 'Image 1'},
 ];
 
 const carteiras: Array<MenuItems> = [
@@ -58,4 +73,4 @@ const constultoria: Array<MenuItems> = [
 ];
 
 
-export { nav, cards, carteiras, cursos, constultoria };
+export { nav, cards, carteiras, cursos, constultoria, testimonials, testimonialsBg };

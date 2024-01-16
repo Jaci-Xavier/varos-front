@@ -27,3 +27,7 @@ export interface MenuItems {
   menu: number;
 }
 
+export interface CarouselItems {
+  id: number;
+  path: string;
+}

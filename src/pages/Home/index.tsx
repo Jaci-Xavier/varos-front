@@ -3,6 +3,9 @@ import CardHero from '../../components/CardHero/Index';
 import Hero from '../../components/Hero';
 import H2sub from '../../components/H2sub';
 import MenuSelect from '../../components/Menu/Index';
+import Testimonial from '../../components/TestimonialCard/Index';
+import { testimonials } from '../../constants/Constants';
+import CardImg from '../../components/CardImg/Index';
 
 function Home() {
   return (
@@ -16,6 +19,10 @@ function Home() {
       </div>
       <div className='flex flex-row w-[98vw]'>
         <MenuSelect />
+      </div>
+      <div className='flex flex-row items-center text-center w-[98vw] h-[572px] bg-slate-600 self-center justify-evenly'>
+        <Testimonial cards={testimonials}/>
+        <CardImg />
       </div>
     </div>
   );
