@@ -40,7 +40,7 @@ const App: React.FC = () => {
 
   return (
     <div className='w-[98vw]  flex flex-row justify-around'>
-      <div className='mt-[70px] ml-[150px] w-[274px] h-[590px]'>
+      <div className='mt-[70px] ml-[60px] w-[274px] h-[590px]'>
         <Menu
           onClick={onClick}
           onOpenChange={onOpenChange}
