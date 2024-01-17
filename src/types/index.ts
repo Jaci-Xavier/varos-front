@@ -36,3 +36,10 @@ export interface FormData {
   email: string;
   phone: string;
 }
+
+export interface MobileMenuOptions {
+  key: number;
+  title: string;
+  path: string;
+  description: string;
+}

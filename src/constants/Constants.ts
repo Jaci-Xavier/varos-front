@@ -1,4 +1,4 @@
-import { Cards, NavItem, MenuItems } from '../types';
+import { Cards, NavItem, MenuItems, MobileMenuOptions } from '../types';
 import g1 from '../assets/Group.png';
 import g2 from '../assets/Group2.png';
 import g3 from '../assets/Group3.png';
@@ -23,6 +23,11 @@ import frame595 from '../assets/Frame 595.png';
 
 const nav: Array<NavItem> = [
   { name: 'Produtos', path: '/produtos' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'Conteúdos', path: '/conteudos' },
+  { name: 'Quem Somos', path: '/quem-somos' },
+];
+const nav2: Array<NavItem> = [
   { name: 'Blog', path: '/blog' },
   { name: 'Conteúdos', path: '/conteudos' },
   { name: 'Quem Somos', path: '/quem-somos' },
@@ -188,4 +193,38 @@ const constultoria: Array<MenuItems> = [
   },
 ];
 
-export { nav, cards, carteiras, cursos, constultoria, testimonials, testimonialsBg };
+const mobileMenu: Array<MobileMenuOptions> = [
+  {
+    key: 1,
+    title: 'Carteiras',
+    path: '/carteiras',
+    description:
+      'Aprenda a encontrar as melhores ações, invista seu dinheiro de maneira inteligente e construa um futuro financeiro sólido.',
+  },
+  {
+    key: 2,
+    title: 'Cursos',
+    path: '/cursos',
+    description:
+      'Aprenda a encontrar as melhores ações, invista seu dinheiro de maneira inteligente e construa um futuro financeiro sólido.',
+  },
+  {
+    key: 3,
+    title: 'Consultoria',
+    path: '/consultoria',
+    description:
+      'Aprenda a encontrar as melhores ações, invista seu dinheiro de maneira inteligente e construa um futuro financeiro sólido.',
+  },
+];
+
+export {
+  nav,
+  cards,
+  carteiras,
+  cursos,
+  constultoria,
+  testimonials,
+  testimonialsBg,
+  mobileMenu,
+  nav2,
+};

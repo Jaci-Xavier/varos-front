@@ -3,7 +3,7 @@ import shoppingCart from '../../assets/shopping--cart.png';
 
 function UserMenu() {
   return (
-    <div className="flex items-center justify-between h-[2.8rem] gap-4">
+    <div className="desktop:flex desktop:items-center desktop:justify-between desktop:h-[2.8rem] desktop:gap-4">
       <a href="/login" className="flex items-center gap-4">
         <img src={shoppingCart} alt="user" className="nav-icon" />
         Assinar Agora

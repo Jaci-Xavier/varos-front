@@ -5,7 +5,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="desktop:mx-[10%] tablet:mx-2">
+    <div className="desktop:mx-[10%]">
       <Header />
       <Home />
       <Footer />

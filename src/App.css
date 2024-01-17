@@ -7,3 +7,12 @@
   height: 25.3px;
   width: 24px;
 }
+
+button.active span:nth-child(2) {
+  /* opacity: 0; */
+  width: 0px;
+}
+
+button span {
+  transition: all 0.4s;
+}
