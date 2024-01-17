@@ -16,7 +16,6 @@ export interface Carteiras {
   description: string;
 }
 
-
 export interface MenuItems {
   title: string;
   img: string;

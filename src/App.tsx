@@ -4,18 +4,17 @@ import Header from './components/Header';
 import Home from './pages/Home';
 
 function App() {
-
   return (
-    <div >
+    <div>
       <Header />
-      <div >
+      <div>
         <Home />
       </div>
-      <div className='flex flex-row justify-center'>
+      <div className="flex flex-row justify-center">
         <Footer />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
