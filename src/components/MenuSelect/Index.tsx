@@ -41,7 +41,7 @@ const MenuSelect: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex desktop:justify-between mt-4">
       <div>
         <Menu
           onClick={onClick}
@@ -49,7 +49,7 @@ const MenuSelect: React.FC = () => {
           openKeys={openKeys}
           selectedKeys={[current]}
           mode="inline"
-          className="bg-[#131516] text-white rounded-[20px] px-6 py-4"
+          className="bg-[#131516] text-white rounded-[20px] px-6 py-4 w-[20rem] "
         >
           {carteiras.length > 0 && (
             <Menu.SubMenu
@@ -128,23 +128,23 @@ const MenuSelect: React.FC = () => {
           )}
         </Menu>
       </div>
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center">
+      <div className="flex flex-col desktop:gap-3 tablet:gap-[2.5rem] rounded-[1rem] bg-[#131516] border border-[#222729] desktop:w-[55rem] pl-3 tablet:mt-14 desktop:mt-0">
+        <div className="flex items-center mt-2">
           <img src={contentImg} alt={contentTitle} className="w-[22px] h-[22px]" />
-          <p>{contentTitle}</p>
+          <p className="desktop:text-lg tablet:text-base">{contentTitle}</p>
         </div>
         <div>
           <div className="w-[25rem] font-bold">
-            <h1 className="text-2xl">{contentDescription}</h1>
+            <h1 className="desktop:text-3xl tablet:text-2xl">{contentDescription}</h1>
           </div>
         </div>
         <div className="w-[24rem]">
-          <p>{content}</p>
+          <p className="desktop:text-lg tablet:text-base">{content}</p>
         </div>
         <img
           src={contentPhoto}
           alt={contentTitle}
-          className="w-[39rem] rounded-tl-[32px] rounded-tr-[32px] rounded-br-[32px]"
+          className="rounded-tl-[32px] rounded-tr-[32px] rounded-br-[32px]"
         />
       </div>
     </div>

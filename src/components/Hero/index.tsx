@@ -4,15 +4,15 @@ import { cards } from '../../constants/Constants';
 
 function Hero() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col gap-[2rem]">
-        <h1 className="text-6xl font-extrabold leading-[4rem] w-[34rem]">
+    <div className="desktop:flex-col desktop:w-[40rem]">
+      <div className="desktop:flex desktop:flex-col desktop:gap-[2rem] tablet:flex tablet:flex-col tablet:gap-8">
+        <h1 className="desktop:text-6xl desktop:font-extrabold desktop:leading-[4rem] desktop:w-[34rem] tablet:text-5xl tablet:font-extrabold tablet:w-[24rem]">
           Investir de forma mais inteligente passa por aqui.
         </h1>
-        <h2 className="w-[26rem] leading-5">
+        <h2 className="desktop:w-[28rem] desktop:leading-5 tablet:w-[25rem] tablet:leading-4 desktop:text-lg tablet:text-base">
           Fazemos de tudo para que você possa conquistar seus sonhos da melhor forma possível.
         </h2>
-        <div>
+        <div className="tablet:-[26rem]">
           <button
             className="py-3 px-11 flex rounded-[40px] text-[#00F700)] items-center justify-center bg-[#19C81966] gap-2"
             type="button"

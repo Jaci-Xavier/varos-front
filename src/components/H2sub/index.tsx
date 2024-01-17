@@ -1,10 +1,10 @@
 function index() {
   return (
-    <div className="flex flex-col w-[38rem] py-8 pt-20">
-      <h2 className="text-4xl font-bold">
+    <div className="desktop:flex flex-col desktop:w-[55rem] tablet:w-[25rem] py-8 pt-20">
+      <h2 className="desktop:text-6xl desktop:font-bold tablet:text-4xl">
         Simplifique seus investimentos e alcance seus objetivos{' '}
       </h2>
-      <p className="w-[32rem] mt-2 text-[18px] leading-none">
+      <p className="desktop:w-[32rem] mt-2 leading-none desktop:text-lg tablet:text-base">
         Conteúdos preparados para trazer mais segurança, independente do seu nível.
       </p>
     </div>
