@@ -4,17 +4,16 @@ import fetchApi from '../../utils/fetchApi';
 
 function ASideCard() {
   return (
-    <div className="w-[466px] h-[144px] flex flex-col">
-      <div className="w-[463px] h-[93px]">
-        <h1 className="text-[38px] font-bold leading-10">
-          Cadastre-se para receber mais informações
-        </h1>
-      </div>
-      <div>
-        <h1 className="text-[18px] font-bold leading-6">
-          Fique ligado no que tem de melhor no Mercado Financeiro
-        </h1>
-      </div>
+    <div className="flex flex-col">
+      <h1 className="text-[2.5rem] font-bold">
+        Cadastre-se para receber <br />
+        mais informações
+      </h1>
+      <p>
+        Fique ligado no que tem de melhor no
+        <br />
+        Mercado Financeiro
+      </p>
     </div>
   );
 }
@@ -49,8 +48,7 @@ const InputForm: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     const apiResponse = await fetchApi('https://jsonplaceholder.typicode.com/todos/1');
-    console.log(apiResponse);
-    console.log(formData);
+    console.log('Fetch em ap aleatória', apiResponse);
     setFormData({
       name: '',
       email: '',
@@ -60,17 +58,12 @@ const InputForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row justify-evenly w-[1200px] h-[384px] mt-[150px]">
-      <div className="">
-        <ASideCard />
-      </div>
-      <div className="w-[564px] h-[384px] rounded-[32px] border border-gray-600 flex flex-col items-center text-center justify-center">
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col items-center w-[452px] h-[264px] justify-evenly"
-        >
+    <div className="flex justify-between">
+      <ASideCard />
+      <div className="px-12 py-14 rounded-[32px] border border-gray-600 flex flex-col">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
           <input
-            className="rounded-[4px] w-[452px] h-[48px] bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]"
+            className="rounded-[4px] py-3 px-32 bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]"
             type="text"
             name="name"
             placeholder="Nome"
@@ -78,7 +71,7 @@ const InputForm: React.FC = () => {
             onChange={handleChange}
           />
           <input
-            className="rounded-[4px] w-[452px] h-[48px] bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]"
+            className="rounded-[4px] py-3 px-32 bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]"
             type="text"
             name="email"
             placeholder="E-mail"
@@ -86,7 +79,7 @@ const InputForm: React.FC = () => {
             onChange={handleChange}
           />
           <input
-            className="rounded-[4px] w-[452px] h-[48px] bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]"
+            className="rounded-[4px] py-3 px-32 bg-[#222729] border border-[#4D5358] pl-3 placeholder-[#878D96]"
             type="tel"
             name="phone"
             placeholder="Celular"
@@ -95,7 +88,7 @@ const InputForm: React.FC = () => {
           />
           <div className="flex flex-row justify-center">
             <button
-              className={`bg-[#19C819] rounded-[4px] w-[452px] h-[48px] text-black text-[18px] font-semibold leading-6 ${
+              className={`bg-[#19C819] rounded-[4px] py-3 px-32 text-black text-[18px] font-bold ${
                 isSubmitDisabled ? 'cursor-not-allowed opacity-50' : ''
               }`}
               type="submit"

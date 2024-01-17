@@ -5,14 +5,10 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div>
+    <div className="mx-[10%]">
       <Header />
-      <div>
-        <Home />
-      </div>
-      <div className="flex flex-row justify-center">
-        <Footer />
-      </div>
+      <Home />
+      <Footer />
     </div>
   );
 }

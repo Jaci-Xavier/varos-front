@@ -4,7 +4,7 @@ import varos from '../../assets/varos.png';
 
 function Navbar() {
   return (
-    <div className="flex items-center justify-between gap-[67px] w-[680px] h-[20px]">
+    <div className="flex items-center justify-between gap-[4.2rem]">
       <img src={varos} alt="varos" className="logo" />
       {nav.map((item: NavItem) => (
         <a

@@ -41,15 +41,15 @@ const MenuSelect: React.FC = () => {
   };
 
   return (
-    <div className="w-[98vw] flex flex-row justify-around">
-      <div className="mt-[10px] ml-[70px] w-[274px] h-[590px]">
+    <div className="flex justify-between">
+      <div>
         <Menu
           onClick={onClick}
           onOpenChange={onOpenChange}
           openKeys={openKeys}
           selectedKeys={[current]}
           mode="inline"
-          className="bg-[#131516] text-white w-[270px] rounded-[20px]"
+          className="bg-[#131516] text-white rounded-[20px] px-6 py-4"
         >
           {carteiras.length > 0 && (
             <Menu.SubMenu
@@ -68,9 +68,9 @@ const MenuSelect: React.FC = () => {
                     height: '56px',
                   }}
                 >
-                  <div className="flex flex-row items-center">
+                  <div className="flex gap-2 items-center">
                     <img src={item.img} className="w-[20px] h-[20px]" alt={item.title} />
-                    <p className="text-[14px] leading-4 ml-1">{item.title}</p>
+                    <p className="text-[14px]">{item.title}</p>
                   </div>
                 </Menu.Item>
               ))}
@@ -80,7 +80,7 @@ const MenuSelect: React.FC = () => {
             <Menu.SubMenu
               key="sub2"
               title="Cursos"
-              className="text-[18px] font-bold leading-[24px] tracking-widest text-left"
+              className="text-[18px] font-bold leading-[24px] tracking-wider"
             >
               {cursos.map((item) => (
                 <Menu.Item
@@ -93,9 +93,9 @@ const MenuSelect: React.FC = () => {
                     height: '56px',
                   }}
                 >
-                  <div className="flex flex-row items-center">
+                  <div className="flex gap-2 items-center">
                     <img src={item.img} className="w-[20px] h-[20px]" alt={item.title} />
-                    <p className="text-[14px] leading-4 ml-1">{item.title}</p>
+                    <p className="text-[14px]">{item.title}</p>
                   </div>
                 </Menu.Item>
               ))}
@@ -105,7 +105,7 @@ const MenuSelect: React.FC = () => {
             <Menu.SubMenu
               key="sub3"
               title="Consultoria"
-              className="text-[18px] font-bold leading-[24px] tracking-widest text-left"
+              className="text-[18px] font-bold leading-[24px] tracking-wider"
             >
               {constultoria.map((item) => (
                 <Menu.Item
@@ -118,9 +118,9 @@ const MenuSelect: React.FC = () => {
                     height: '56px',
                   }}
                 >
-                  <div className="flex flex-row items-center">
+                  <div className="flex gap-2 items-center">
                     <img src={item.img} className="w-[20px] h-[20px]" alt={item.title} />
-                    <p className="text-[14px] leading-4 ml-1">{item.title}</p>
+                    <p className="text-[14px]">{item.title}</p>
                   </div>
                 </Menu.Item>
               ))}
@@ -128,23 +128,23 @@ const MenuSelect: React.FC = () => {
           )}
         </Menu>
       </div>
-      <div id="72" className="w-[662px] h-[536px] mt-[10px] flex flex-col">
-        <div className="flex flex-row mt-4 items-center text-center w-[280px] h-[56px]">
-          <img src={contentImg} alt={contentTitle} className="w-[22px] h-[22px] p-0 ml-4" />
-          <p className="ml-[12px] self-center font-semibold">{contentTitle}</p>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center">
+          <img src={contentImg} alt={contentTitle} className="w-[22px] h-[22px]" />
+          <p>{contentTitle}</p>
         </div>
-        <div className="ml-4">
-          <div className="w-[400px] h-[60px] size-8 font-semibold text-base leading-[28px]">
+        <div>
+          <div className="w-[25rem] font-bold">
             <h1 className="text-2xl">{contentDescription}</h1>
           </div>
         </div>
-        <div className="w-[430px]">
-          <h1 className="mt-6 ml-4 text-base">{content}</h1>
+        <div className="w-[24rem]">
+          <p>{content}</p>
         </div>
         <img
           src={contentPhoto}
           alt={contentTitle}
-          className="w-[621px] h-[329px] mt-2 ml-4 rounded-tl-[32px] rounded-tr-[32px] rounded-br-[32px]"
+          className="w-[39rem] rounded-tl-[32px] rounded-tr-[32px] rounded-br-[32px]"
         />
       </div>
     </div>

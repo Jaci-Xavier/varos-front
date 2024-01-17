@@ -3,7 +3,7 @@ import UserMenu from '../UserMenu';
 
 function Header() {
   return (
-    <div className="flex flex-row w-100vw h-[64px] left-[0.2px] gap-[177px] items-center p-[10px 144px 10px 144px] justify-around">
+    <div className="flex h-[9vh] gap-[11rem] items-center justify-between">
       <Navbar />
       <UserMenu />
     </div>

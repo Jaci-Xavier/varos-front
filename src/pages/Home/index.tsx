@@ -9,24 +9,18 @@ import Form from '../../components/InputForm/Index';
 
 function Home() {
   return (
-    <div className="">
-      <div className="flex items-center text-center w-[98vw] justify-evenly h-[750px]">
+    <div>
+      <div className="flex items-center justify-between py-[5rem]">
         <Hero />
         <CardHero />
       </div>
-      <div className="flex w-[98vw] justify-start">
-        <H2sub />
-      </div>
-      <div className="flex flex-row w-[98vw]">
-        <MenuSelect />
-      </div>
-      <div className="flex flex-row items-center text-center w-[98vw] h-[572px] self-center justify-evenly mt-[70px]">
+      <H2sub />
+      <MenuSelect />
+      <div className="flex items-center justify-between py-[6rem]">
         <Testimonial cards={testimonials} />
         <CardImg />
       </div>
-      <div className="flex flex-row justify-center">
-        <Form />
-      </div>
+      <Form />
     </div>
   );
 }

@@ -3,15 +3,15 @@ import { Carousel as AntdCarousel } from 'antd';
 
 function CarouselComponent({ cards }: { cards: Cards[] }) {
   return (
-    <div className="flex flex-row w-[562px] h-[40px] justify-between items-center text-center rounded-[32px]">
-      <p className="text-[20px] font-normal leading-6 ml-[20px]">visto em</p>
-      <AntdCarousel autoplay dots={false} className="h-[38px] w-[350px]">
+    <div className="mt-12 flex w-[34rem] justify-between items-center">
+      <p className="leading-6 ml-[20px]">visto em</p>
+      <AntdCarousel autoplay dots={false} className="h-[2.4rem] w-[22rem]">
         {cards.map((card) => (
-          <div className="flex justify-center item-center bg" key={card.title}>
+          <div key={card.title}>
             <img
               src={card.path}
               alt={card.title}
-              className={`w-[${card.width}] h-[${card.height}] left-10 items-center`}
+              className={`w-[${card.width}] h-[${card.height}] left-2 items-center`}
             />
           </div>
         ))}
