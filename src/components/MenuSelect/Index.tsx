@@ -49,7 +49,7 @@ const MenuSelect: React.FC = () => {
           openKeys={openKeys}
           selectedKeys={[current]}
           mode="inline"
-          className="bg-[#131516] text-white rounded-[20px] px-6 py-4 w-[20rem] mobile:w-[18rem]"
+          className="bg-[#131516] text-white rounded-[20px] px-6 py-4 w-[20rem] mobile:w-[18rem] desktop:w-[28rem] desktop:h-[34rem] mobile:flex mobile:flex-col"
         >
           {carteiras.length > 0 && (
             <Menu.SubMenu
