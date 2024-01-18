@@ -41,7 +41,7 @@ const MenuSelect: React.FC = () => {
   };
 
   return (
-    <div className="flex desktop:justify-between mt-4">
+    <div className="flex desktop:justify-between mt-4 mobile:flex-col mobile:gap-8 items-center">
       <div>
         <Menu
           onClick={onClick}
@@ -49,7 +49,7 @@ const MenuSelect: React.FC = () => {
           openKeys={openKeys}
           selectedKeys={[current]}
           mode="inline"
-          className="bg-[#131516] text-white rounded-[20px] px-6 py-4 w-[20rem] "
+          className="bg-[#131516] text-white rounded-[20px] px-6 py-4 w-[20rem] mobile:w-[18rem] desktop:w-[28rem] desktop:h-[34rem] mobile:flex mobile:flex-col"
         >
           {carteiras.length > 0 && (
             <Menu.SubMenu
@@ -128,17 +128,17 @@ const MenuSelect: React.FC = () => {
           )}
         </Menu>
       </div>
-      <div className="flex flex-col desktop:gap-3 tablet:gap-[2.5rem] rounded-[1rem] bg-[#131516] border border-[#222729] desktop:w-[55rem] pl-3 tablet:mt-14 desktop:mt-0">
+      <div className="flex flex-col desktop:gap-3 tablet:gap-[2.5rem] rounded-[1rem] bg-[#131516] border border-[#222729] desktop:w-[55rem] pl-3 tablet:mt-14 desktop:mt-0 mobile:w-[18rem] mobile:pl-1 mobile:px-1 mobile:gap-2">
         <div className="flex items-center mt-2">
           <img src={contentImg} alt={contentTitle} className="w-[22px] h-[22px]" />
           <p className="desktop:text-lg tablet:text-base">{contentTitle}</p>
         </div>
         <div>
-          <div className="w-[25rem] font-bold">
-            <h1 className="desktop:text-3xl tablet:text-2xl">{contentDescription}</h1>
+          <div className="w-[25rem] font-bold mobile:w-full">
+            <h1 className="desktop:text-3xl tablet:text-2xl mobile:text-xl mobile:font-bold">{contentDescription}</h1>
           </div>
         </div>
-        <div className="w-[24rem]">
+        <div className="w-[24rem] mobile:w-full">
           <p className="desktop:text-lg tablet:text-base">{content}</p>
         </div>
         <img

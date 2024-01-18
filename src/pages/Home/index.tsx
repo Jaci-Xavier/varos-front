@@ -16,7 +16,7 @@ function Home() {
       </div>
       <H2sub />
       <MenuSelect />
-      <div className="desktop:flex desktop:justify-between tablet:flex py-60">
+      <div className="desktop:flex desktop:justify-between tablet:flex py-60 mobile:py-20">
         <Testimonial cards={testimonials} />
         <CardImg />
       </div>

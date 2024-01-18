@@ -4,8 +4,8 @@ import { Carousel as AntdCarousel } from 'antd';
 function CarouselComponent({ cards }: { cards: Cards[] }) {
   return (
     <div className="mt-12 flex desktop:w-[34rem] justify-between items-center tablet:w-[24rem]">
-      <p className="leading-6 ml-[20px]">visto em</p>
-      <AntdCarousel autoplay dots={false} className="h-[2.4rem] desktop:w-[22rem] tablet:w-[17rem]">
+      <p className="leading-6 ml-[20px] mobile:ml-0">visto em</p>
+      <AntdCarousel autoplay dots={false} className="h-[2.4rem] desktop:w-[22rem] tablet:w-[17rem] mobile:w-[12rem]">
         {cards.map((card) => (
           <div key={card.title}>
             <img

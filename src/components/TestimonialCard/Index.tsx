@@ -3,17 +3,17 @@ import { Carousel as AntdCarousel } from 'antd';
 
 function Testimonial({ cards }: { cards: Cards[] }) {
   return (
-    <div className="flex flex-col tablet:w-[22rem] desktop:w-[38rem]">
+    <div className="flex flex-col tablet:w-[22rem] desktop:w-[38rem] mobile:text-center mobile:gap-4 mobile:justify-center mobile:w-full mobile:ml-[2px]">
       <div className="flex flex-col">
-        <h1 className="desktop:text-6xl tablet:text-4xl font-bold">Didática de verdade</h1>
-        <p className="desktop:text-lg tablet:text-base font-bold">Garantindo seu aprendizado</p>
+        <h1 className="desktop:text-6xl tablet:text-4xl font-bold mobile:text-3xl">Didática de verdade</h1>
+        <p className="desktop:text-lg tablet:text-base font-bold mobile:text-xl">Garantindo seu aprendizado</p>
       </div>
       <AntdCarousel
         autoplay
         dots={false}
         autoplaySpeed={5000}
         easing="linear"
-        className="tablet:h-[19rem] desktop:h-[36rem]"
+        className="tablet:h-[19rem] desktop:h-[36rem] mobile:h-[26rem]"
       >
         {cards.map((card) => (
           <div key={card.title}>

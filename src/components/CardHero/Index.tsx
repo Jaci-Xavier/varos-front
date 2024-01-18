@@ -4,7 +4,7 @@ import fator from '../../assets/FATOR.png';
 
 function CardHero() {
   return (
-    <div className="flex flex-col desktop:justify-between w-full desktop:gap-16 desktop:px-[18rem] tablet:px-8 tablet:gap-16">
+    <div className="flex flex-col desktop:justify-between w-full desktop:gap-16 desktop:px-[18rem] tablet:px-8 tablet:gap-16 mobile:hidden">
       <div className="flex items-center text-center gap-3 ">
         <div className="w-[51px] h-[46px] rounded-lg border border-gray-600 flex items-center justify-center">
           <img src={fator} alt="imagem" className="w-[21px] h-[21px]" />
